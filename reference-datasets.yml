@@ -1,0 +1,199 @@
+name: Ocean Section Reference Datasets Catalog
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+  woa-2018-gx1v7-annual-decav:
+    description: World Ocean Atlas 2018 decadal average
+    driver: netcdf
+    metadata:
+      prefix: woa
+      version: 2018
+      grid: gx1v7
+      frequency: annual
+      period: decav
+    args:
+      urlpath: '/glade/campaign/cgd/oce/projects/obs/WOA/woa2018/gx1v7/annual/*decav*'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: False
+
+  woa-2018-gx1v7-annual-all:
+    description: World Ocean Atlas 2018 all data average
+    driver: netcdf
+    metadata:
+      grid: gx1v7
+      frequency: annual
+      date: 2018
+    args:
+      urlpath: '/glade/campaign/cgd/oce/projects/obs/WOA/woa2018/gx1v7/annual/*all*'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: False
+        
+  woa-2018-tx0.66v1-annual-all:
+    description: World Ocean Atlas 2018 all data average
+    driver: netcdf
+    metadata:
+      prefix: woa
+      version: 2018
+      grid: tx0.66v1
+      frequency: annual
+    args:
+      urlpath: '/glade/u/home/gmarques/Notebooks/CESM_MOM6/WOA18_remapping/WOA18_*_tx0.66v1_34lev_ann_avg.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: False
+        
+  moc-rapid:
+    description: MOC estimate from RAPID array at 26°N
+    driver: netcdf
+    metadata:
+      prefix: moc
+    args:
+      urlpath: '/glade/work/gmarques/cesm/datasets/RAPID/moc_vertical.nc'
+      
+  transports-rapid:
+    description: Water mass transports from RAPID array at 26°N
+    driver: netcdf
+    args:
+      urlpath: '/glade/work/gmarques/cesm/datasets/RAPID/moc_transports.nc'
+
+  moc-core2-26p5:
+    description: AMOC time series data (5th) cycle used in Danabasoglu et al., doi:10.1016/j.ocemod.2015.11.007
+    driver: netcdf
+    metadata:
+      prefix: moc
+    args:
+      urlpath: '/glade/p/cesm/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.26p5.nc'
+
+  moc-core2-45:
+    description: AMOC time series data (5th) cycle used in Danabasoglu et al., doi:10.1016/j.ocemod.2015.11.007
+    driver: netcdf
+    metadata:
+      prefix: moc
+    args:
+      urlpath: '/glade/p/cesm/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.45.nc'
+
+  moc-pop-jra-26:
+    description: AMOC time series data from POP JRA 55 @ 26N
+    driver: netcdf
+    metadata:
+      prefix: moc
+    args:
+      urlpath: '/glade/u/home/bryan/MOM6-modeloutputanalysis/AMOC_series_26n.g210.GIAF_JRA.v13.gx1v7.01.nc'
+
+  moc-pop-jra-45:
+    description: AMOC time series data from POP JRA55 @ 45N
+    driver: netcdf
+    metadata:
+      prefix: moc
+    args:
+      urlpath: '/glade/u/home/gmarques/Notebooks/POP/MOC/AMOC_series_45n.g210.GIAF_JRA.v13.gx1v7.01.nc'
+
+  PHC2-tx0.66v1:
+    description: PHC2 climatology
+    driver: netcdf
+    metadata:
+      grid: tx0.66v1
+      frequency: annual
+      date: 2018
+    args:
+      urlpath: '/glade/p/cesm/omwg/obs_data/phc/PHC2_*_tx0.66v1_34lev_ann_avg.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_coords: False
+        decode_times: False
+        
+  eq-uvts-johnson:
+    description: Johnson et al (2001) climatology
+    driver: netcdf
+    args:
+      urlpath: '/glade/p/cesm/omwg/obs_data/johnson_pmel/meanfit_m.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_coords: False
+        decode_times: False
+        
+  sla-rms-aviso-tx0.66v1:
+    description: RMS AVISO sea level anomaly climatology
+    driver: netcdf
+    metadata:
+      grid: tx0.66v1
+      frequency: annual
+      date: 0000
+    args:
+      urlpath: '/glade/work/gmarques/cesm/datasets/aviso/rms_sla_climatology_remaped_to_tx0.6v1.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_coords: False
+        decode_times: False
+        
+  mld-mimoc-tx0.66v1:
+    description: MIMOC MLD climatology
+    driver: netcdf
+    metadata:
+      grid: tx0.66v1
+      frequency: annual
+      date: 0000
+    args:
+      urlpath: '/glade/work/gmarques/cesm/datasets/Mimoc/MIMOC_ML_v2.2_PT_S_MLP_remapped_to_tx06v1.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_coords: False
+        decode_times: False
+ 
+  mld-argo-tx0.66v1:
+    description: Argo MLD climatology
+    driver: netcdf
+    metadata:
+      grid: tx0.66v1
+      frequency: annual
+      date: 0000
+    args:
+      urlpath: '/glade/work/gmarques/cesm/datasets/MLD/Argo/ARGO_MLD_remapped_to_tx06v1.nc'
+      chunks: {}
+        
+  mld-deboyer-tx0.66v1:
+    description: De Boyer Montegut MLD climatology
+    driver: netcdf
+    metadata:
+      grid: tx0.66v1
+      frequency: annual
+      date: 0000
+    args:
+      urlpath: '/glade/work/gmarques/cesm/datasets/MLD/deBoyer/deBoyer_MLD_remapped_to_tx06v1.nc'
+      chunks: {}
+    
+  pht-trenberth-caron:
+    description: Trenberth & Caron poleward heat transport estimate  
+    driver: netcdf
+    metadata:
+      frequency: annual
+      date: 0000
+    args:
+      urlpath: '/glade/work/gmarques/cesm/datasets/Trenberth_and_Caron_Heat_Transport.nc'
+      chunks: {}  
+      
+  pht-pop-jra-gx1v7:
+    description: Poleward heat transport estimate from POP 31 year mean (years 29-59) 
+    driver: netcdf
+    metadata:
+      grid: gx1v7
+      frequency: annual
+      date: 0000
+    args:
+      urlpath: '/glade/u/home/gmarques/Notebooks/POP/MHT/MHT_mean.g210.GIAF_JRA.v13.gx1v7.01.nc'
+      chunks: {} 
+      
+  pht-jra:
+    description: Poleward heat transport estimate based on the JRA-55 v1.3 forcing (Tsujino et al, 2019)
+    driver: netcdf
+    metadata:
+      grid: gx1v7
+      frequency: annual
+      date: 0000
+    args:
+      urlpath: '/glade/work/gmarques/cesm/datasets/Heat_transport/jra55fcst_v1_3_annual_1x1/nht_jra55do_v1_3.nc'
+      chunks: {}
