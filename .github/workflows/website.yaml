@@ -35,10 +35,10 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: build index.html
-        run:
-          - python gen_html_documentation.py
-          - mkdir -p build
-          - mv index.html build/
+        run: |
+          python gen_html_documentation.py
+          mkdir -p build
+          mv index.html build/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
