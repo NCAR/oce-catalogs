@@ -1,5 +1,5 @@
 # modified from https://github.com/actions/starter-workflows/blob/main/pages/mdbook.yml
-name: Deploy Catalog to Pages
+name: Test HTML build
 
 on: [pull_request, workflow_dispatch]
 
@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   # Build job
-  build:
+  test-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
