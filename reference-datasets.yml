@@ -154,6 +154,16 @@ sources:
     args:
       urlpath: '/glade/work/gmarques/cesm/datasets/MLD/Argo/ARGO_MLD_remapped_to_tx06v1.nc'
       chunks: {}
+
+  mld-argo-native:
+    description: Argo MLD climatology, native
+    driver: netcdf
+    metadata:
+      grid: uniform
+      date: 0000
+      url: 'http://mixedlayer.ucsd.edu/'
+    args:
+      urlpath: '/glade/work/dcherian/datasets/argomld/Argo_mixedlayers_monthlyclim_03172021.nc'
         
   mld-deboyer-tx0.66v1:
     description: De Boyer Montegut MLD climatology
@@ -197,3 +207,35 @@ sources:
     args:
       urlpath: '/glade/work/gmarques/cesm/datasets/Heat_transport/jra55fcst_v1_3_annual_1x1/nht_jra55do_v1_3.nc'
       chunks: {}
+
+  # copepod-gx1v7:
+  #   description: Copepod biomass
+  #   driver: zarr
+  #   metadata:
+  #     grid: gx1v7
+  #     frequency: annual
+  #     date: 0000
+  #     url: 'https://www.st.nmfs.noaa.gov/copepod/about/databases.html'
+  #   args:
+  #     urlpath: '/glade/work/kristenk/copepod-biomass/data/POP_gx1v7/*.zarr'
+  #     chunks: {}
+
+  tidal-dissipation-jayne-tx0.66v1:
+    description: Estimated tidal dissipation data by S.R. Jayne. WHOI.
+    driver: netcdf
+    metadata:
+      grid: tx0.66v1
+      frequency: None
+      date: 0000
+    args:
+      urlpath: '/glade/work/altuntas/mom.input/tx0.66v1/gen_grid_190314/tidal_tx0.66v1/energy_new.nc'
+
+  florida-current-cable:
+    description: Florida Current cable transport estimate
+    driver: netcdf
+    metadata:
+      grid: None
+      frequency: None
+      date: 0000
+    args:
+      urlpath: '/glade/work/fredc/OBS/Florida_Current/FC_cable_transport_1982-2020.nc'
