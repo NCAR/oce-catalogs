@@ -175,6 +175,17 @@ sources:
       urlpath: '/glade/work/gmarques/cesm/datasets/MLD/deBoyer/deBoyer_MLD_remapped_to_tx06v1.nc'
       chunks: {}
 
+  mld-deboyer-tx2_3v2:
+    description: De Boyer Montegut MLD climatology remaped to tx0.66v1
+    driver: netcdf
+    metadata:
+      grid: tx2_3v2
+      frequency: monthly
+      version: 2008
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/mld/deBoyer2004/deBoyer04_MLD_remapped_to_tx2_3.nc'
+      chunks: {}
+
   pht-trenberth-caron:
     description: Trenberth & Caron poleward heat transport estimate
     driver: netcdf
