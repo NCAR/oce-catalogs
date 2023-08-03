@@ -130,6 +130,20 @@ sources:
         decode_coords: False
         decode_times: False
 
+  sla-aviso-native:
+    description: Aviso Sea Level Anomalies referenced to the [1993, 2012] period
+    driver: netcdf
+    metadata:
+      grid: uniform
+      version: 2020
+      frequency: monthly
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/obs/aviso/mean_sea_level_anomaly/dt_global_allsat_msla_h_y????_m??.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_coords: False
+        decode_times: False
+
   sla-rms-aviso-tx0.66v1:
     description: RMS AVISO sea level anomaly climatology
     driver: netcdf
