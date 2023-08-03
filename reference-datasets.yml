@@ -243,7 +243,7 @@ sources:
   #     urlpath: '/glade/work/kristenk/copepod-biomass/data/POP_gx1v7/*.zarr'
   #     chunks: {}
 
-  tidal-dissipation-jayne-tx0.66v1:
+  tidal-dissipation-jayne-native:
     description: Estimated tidal dissipation data by S.R. Jayne. WHOI.
     driver: netcdf
     metadata:
@@ -251,7 +251,7 @@ sources:
       frequency: None
       version: 2006
     args:
-      urlpath: '/glade/work/altuntas/mom.input/tx0.66v1/gen_grid_190314/tidal_tx0.66v1/energy_new.nc'
+      urlpath: '/glade/campaign/cgd/oce/datasets/obs/tidal_dissipation/energy_new.nc'
 
   florida-current-cable:
     description: Florida Current cable transport estimate
