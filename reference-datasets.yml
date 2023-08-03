@@ -178,6 +178,28 @@ sources:
     args:
       urlpath: '/glade/work/dcherian/datasets/argomld/Argo_mixedlayers_monthlyclim_03172021.nc'
 
+  mld-deboyer-2023-native:
+    description: De Boyer Montegut 2023 MLD climatology, https://doi.org/10.17882/91774
+    driver: netcdf
+    metadata:
+      grid: uniform
+      frequency: monthly
+      version: 2022
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/obs/mld/deBoyer_2023/mld_dr003_ref10m.nc'
+      chunks: {}
+
+  mld-deboyer-2004-native:
+    description: De Boyer Montegut 2004 MLD climatology, https://cerweb.ifremer.fr/deboyer/mld/Surface_Mixed_Layer_Depth.php
+    driver: netcdf
+    metadata:
+      grid: uniform
+      frequency: monthly
+      version: 2004
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/obs/mld/deBoyer_2004/mld_DR003_c1m_reg2.0.nc'
+      chunks: {}
+
   mld-deboyer-tx0.66v1:
     description: De Boyer Montegut MLD climatology remaped to tx0.66v1
     driver: netcdf
