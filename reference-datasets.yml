@@ -131,10 +131,10 @@ sources:
         decode_times: False
 
   sla-aviso-native:
-    description: Aviso Sea Level Anomalies referenced to the [1993, 2012] period
+    description: Aviso Sea Level Anomalies referenced to the [1993, 2012] period (native, 0.25 deg)
     driver: netcdf
     metadata:
-      grid: uniform
+      grid: native
       version: 2020
       frequency: monthly
     args:
@@ -183,20 +183,20 @@ sources:
       chunks: {}
 
   mld-argo-native:
-    description: Argo MLD climatology, native
+    description: Argo MLD climatology, native (1 deg)
     driver: netcdf
     metadata:
-      grid: uniform
+      grid: native
       version: 0000
       url: 'http://mixedlayer.ucsd.edu/'
     args:
       urlpath: '/glade/work/dcherian/datasets/argomld/Argo_mixedlayers_monthlyclim_03172021.nc'
 
   mld-deboyer-2023-native:
-    description: De Boyer Montegut 2023 MLD climatology, https://doi.org/10.17882/91774
+    description: De Boyer Montegut 2023 MLD climatology (native 1 deg), https://doi.org/10.17882/91774
     driver: netcdf
     metadata:
-      grid: uniform
+      grid: native
       frequency: monthly
       version: 2022
     args:
@@ -204,10 +204,10 @@ sources:
       chunks: {}
 
   mld-deboyer-2004-native:
-    description: De Boyer Montegut 2004 MLD climatology, https://cerweb.ifremer.fr/deboyer/mld/Surface_Mixed_Layer_Depth.php
+    description: De Boyer Montegut 2004 MLD climatology (native 1 deg), https://cerweb.ifremer.fr/deboyer/mld/Surface_Mixed_Layer_Depth.php
     driver: netcdf
     metadata:
-      grid: uniform
+      grid: native
       frequency: monthly
       version: 2004
     args:
@@ -280,10 +280,10 @@ sources:
   #     chunks: {}
 
   tidal-dissipation-jayne-native:
-    description: Estimated tidal dissipation data by S.R. Jayne. WHOI.
+    description: Estimated tidal dissipation data by S.R. Jayne. WHOI. (native, 0.5 deg)
     driver: netcdf
     metadata:
-      grid: uniform
+      grid: native
       frequency: None
       version: 2006
     args:
