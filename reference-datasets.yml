@@ -60,6 +60,44 @@ sources:
       xarray_kwargs:
         decode_times: False
 
+  woa-2018-tx2_3v2-monthly-all:
+    description: World Ocean Atlas 2018 monthly average climatology
+    driver: netcdf
+    metadata:
+      prefix: woa
+      version: 2018
+      grid: tx2_3v2
+      frequency: monthly
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/woa18/WOA18_*_tx2_3_35lev_monthly_avg.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: False
+
+  woa-2018-tx1_4v1-annual-all:
+    description: World Ocean Atlas 2018 all data average
+    driver: netcdf
+    metadata:
+      prefix: woa
+      version: 2018
+      grid: tx1_4v1
+      frequency: annual
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx1_4/woa18/WOA18_*_tx1_4_35lev_ann_avg.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: False
+
+  geothermal:
+    description: Geothermal heat flow from Davies, 2013, re-gridded to OM4_025
+    driver: netcdf
+    metadata:
+      prefix: geo
+      grid: OM4_025
+      version: 2013
+    args:
+      urlpath: '/glade/campaign/cgd//oce/datasets/obs/geothermal/geothermal_davies2013_ncar.nc'
+
   moc-rapid:
     description: MOC vertical profile estimate from RAPID array at 26°N
     driver: netcdf
@@ -226,7 +264,7 @@ sources:
       chunks: {}
 
   mld-deboyer-tx2_3v2:
-    description: De Boyer Montegut MLD climatology remaped to tx0.66v1
+    description: De Boyer Montegut MLD climatology remaped to tx2_3v2
     driver: netcdf
     metadata:
       grid: tx2_3v2
@@ -234,6 +272,17 @@ sources:
       version: 2008
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/mld/deBoyer2004/deBoyer04_MLD_remapped_to_tx2_3.nc'
+      chunks: {}
+
+  mld-deboyer-tx1_4v1:
+    description: De Boyer Montegut MLD climatology remaped to tx1_4v1
+    driver: netcdf
+    metadata:
+      grid: tx1_4v1
+      frequency: monthly
+      version: 2008
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx1_4/mld/deBoyer2004/deBoyer04_MLD_remapped_to_tx1_4.nc'
       chunks: {}
 
   pht-trenberth-caron:
