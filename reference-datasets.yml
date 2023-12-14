@@ -328,6 +328,16 @@ sources:
   #     urlpath: '/glade/work/kristenk/copepod-biomass/data/POP_gx1v7/*.zarr'
   #     chunks: {}
 
+  tpxo-tides:
+    description: TPXO9.v5a 2021 transport/current file: open ocean TPXO9.v2, coastal - averaged TPXO9-atlas-v5
+    driver: netcdf
+    metadata:
+      grid: 1/6 deg
+      frequency: None
+      version: 2021
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/obs/tpxo_tides/u_tpxo9.v5a.nc'
+
   tidal-dissipation-jayne-native:
     description: Estimated tidal dissipation data by S.R. Jayne. WHOI. (native, 0.5 deg)
     driver: netcdf
