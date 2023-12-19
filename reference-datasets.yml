@@ -329,7 +329,7 @@ sources:
   #     chunks: {}
 
   tpxo-tides:
-    description: TPXO9.v5a 2021 transport/current file: open ocean TPXO9.v2, coastal - averaged TPXO9-atlas-v5
+    description: TPXO9.v5a 2021 transport-current file; open ocean TPXO9.v2, coastal - averaged TPXO9-atlas-v5
     driver: netcdf
     metadata:
       grid: 1/6 deg
