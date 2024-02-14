@@ -118,7 +118,7 @@ sources:
     metadata:
       prefix: moc
     args:
-      urlpath: '/glade/p/cesm/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.26p5.nc'
+      urlpath: '/glade/campaign/cesm/community/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.26p5.nc'
 
   moc-core2-45:
     description: AMOC time series data @ 45N; 5th cycle used in Danabasoglu et al., doi:10.1016/j.ocemod.2015.11.007
@@ -126,7 +126,7 @@ sources:
     metadata:
       prefix: moc
     args:
-      urlpath: '/glade/p/cesm/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.45.nc'
+      urlpath: '/glade/campaign/cesm/community/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.45.nc'
 
   moc-pop-jra-26:
     description: AMOC time series data from POP JRA 55 @ 26N
@@ -152,7 +152,7 @@ sources:
       frequency: annual
       version: 2018
     args:
-      urlpath: '/glade/p/cesm/omwg/obs_data/phc/PHC2_*_tx0.66v1_34lev_ann_avg.nc'
+      urlpath: '/glade/campaign/cesm/community/omwg/obs_data/phc/PHC2_*_tx0.66v1_34lev_ann_avg.nc'
       chunks: {}
       xarray_kwargs:
         decode_coords: False
@@ -162,7 +162,7 @@ sources:
     description: Johnson et al (2001) climatology
     driver: netcdf
     args:
-      urlpath: '/glade/p/cesm/omwg/obs_data/johnson_pmel/meanfit_m.nc'
+      urlpath: '/glade/campaign/cesm/community/omwg/obs_data/johnson_pmel/meanfit_m.nc'
       chunks: {}
       xarray_kwargs:
         decode_coords: False
