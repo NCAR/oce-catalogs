@@ -231,7 +231,7 @@ sources:
       frequency: annual
       version: 2018
     args:
-      urlpath: '/glade/work/gmarques/cesm/datasets/obs/RG_ArgoClim/RG_ArgoClim_TS.200401-201812.nc'
+      urlpath: '/glade/campaign/cgd/oce/datasets/obs/RG_ArgoClim/RG_ArgoClim_TS.200401-201812.nc'
       chunks: {}
 
   mld-argo-tx0.66v1:
