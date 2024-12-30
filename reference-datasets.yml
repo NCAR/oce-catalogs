@@ -60,6 +60,20 @@ sources:
       xarray_kwargs:
         decode_times: False
 
+  woa-2018-tx2_0-annual-all:
+    description: World Ocean Atlas 2018 all data average
+    driver: netcdf
+    metadata:
+      prefix: woa
+      version: 2018
+      grid: tx2_0
+      frequency: annual
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_0/woa18/WOA18_*_tx2_0_35lev_ann_avg.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: False
+
   woa-2018-tx2_3v2-monthly-all:
     description: World Ocean Atlas 2018 monthly average climatology
     driver: netcdf
