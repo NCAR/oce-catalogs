@@ -223,6 +223,17 @@ sources:
         decode_coords: False
         decode_times: False
 
+  rg-argo-2018:
+    description: Roemmich-Gilson Argo Annual mean Climatology
+    driver: netcdf
+    metadata:
+      grid: native
+      frequency: annual
+      version: 2018
+    args:
+      urlpath: '/glade/work/gmarques/cesm/datasets/obs/RG_ArgoClim/RG_ArgoClim_TS.200401-201812.nc'
+      chunks: {}
+
   mld-argo-tx0.66v1:
     description: Argo MLD climatology from Holte et al. 2017 remapped to tx0.66v1
     driver: netcdf
