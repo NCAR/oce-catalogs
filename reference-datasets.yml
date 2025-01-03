@@ -310,6 +310,17 @@ sources:
       urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx1_4/mld/deBoyer2004/deBoyer04_MLD_remapped_to_tx1_4.nc'
       chunks: {}
 
+  oisstv2-tx2_3v2:
+    description: Monthly OISSTv2 remapped to tx2_3v2
+    driver: netcdf
+    metadata:
+      grid: tx2_3v2
+      frequency: monthly
+      version: 2019
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/oisst/oisstv2_to_tx2_3v2.nc'
+      chunks: {}
+
   pht-trenberth-caron:
     description: Trenberth & Caron poleward heat transport estimate
     driver: netcdf
