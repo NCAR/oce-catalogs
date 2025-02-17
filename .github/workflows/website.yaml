@@ -47,10 +47,10 @@ jobs:
         run: ls -R build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
+          name: github-pages  # Important: use this name for deploy-pages to find it
           path: ./build
-          name: catalog-artifact  # Explicit name for debugging
 
   # Deployment job
   deploy:
