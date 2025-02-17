@@ -182,6 +182,16 @@ sources:
         decode_coords: False
         decode_times: False
 
+  eke-global-ni-et-al-2023:
+    description: Ni et al (2023) EKE climatology
+    driver: netcdf
+    args:
+      urlpath: '/glade/campaign/cesm/community/omwg/obs_data/eddy_kinetic_energy/eke_global.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_coords: False
+        decode_times: False
+
   sla-aviso-native:
     description: Aviso Sea Level Anomalies referenced to the [1993, 2012] period (native, 0.25 deg)
     driver: netcdf
