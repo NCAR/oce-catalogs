@@ -196,6 +196,16 @@ sources:
         decode_coords: False
         decode_times: False
 
+  adt-aviso-tx2_3v2:
+    description: AVISO Absolute Dynamic Topography (ADT) averaged from 1993 to 2000 and remaped to tx2_3v2
+    driver: netcdf
+    metadata:
+      grid: tx2_3v2
+      version: 2020
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/aviso/aviso_adt_to_tx2_3v2.nc'
+      chunks: {}
+
   sla-rms-aviso-tx0.66v1:
     description: RMS AVISO sea level anomaly climatology
     driver: netcdf
