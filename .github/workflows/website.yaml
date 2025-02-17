@@ -64,8 +64,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages  # Must match the name from the upload step
+          path: ./build
+      - name: Debug downloaded artifact
+        run: ls -R build  # Check if files exist after downloading
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-
