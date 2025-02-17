@@ -37,20 +37,26 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
 
-      - name: build index.html
+      - name: Build index.html
         run: |
           python gen_html_documentation.py
           mkdir -p build
           mv index.html build/
 
-      - name: Debug artifact contents
-        run: ls -R build
+      - name: Debug build directory (check if files exist)
+        run: |
+          ls -lah build || echo "No build directory found!"  # Ensure files exist in build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: github-pages  # Required for deploy-pages to find it
+          name: github-pages  # Ensure artifact name is correct
           path: ./build
+
+      - name: Check uploaded artifact
+        run: |
+          echo "Check the uploaded artifact"
+          ls -lah  # Check if the artifact is available to upload
 
   # Deployment job
   deploy:
