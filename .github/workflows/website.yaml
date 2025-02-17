@@ -43,10 +43,14 @@ jobs:
           mkdir -p build
           mv index.html build/
 
+      - name: Debug artifact contents
+        run: ls -R build
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
           path: ./build
+          name: catalog-artifact  # Explicit name for debugging
 
   # Deployment job
   deploy:
