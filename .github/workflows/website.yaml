@@ -60,14 +60,22 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: List available artifacts
+        run: |
+          echo "Checking available artifacts"
+          ls -lah ${{ github.workspace }}
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: github-pages  # Must match the name from the upload step
+          name: github-pages  # This must match the name from the upload step
           path: ./build
-      - name: Debug downloaded artifact
-        run: ls -R build  # Check if files exist after downloading
+
+      - name: Debug downloaded files
+        run: |
+          ls -lah build || echo "No files downloaded!"  # Check if files were downloaded
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+
