@@ -64,7 +64,7 @@ sources:
         decode_times: False
         engine: netcdf4
 
-  woa-2018-tx2_0-annual-all:
+  woa-2018-tx2_0v1-annual-all:
     description: World Ocean Atlas 2018 all data average
     driver: netcdf
     metadata:
@@ -73,7 +73,7 @@ sources:
       grid: tx2_0
       frequency: annual
     args:
-      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_0/woa18/WOA18_*_tx2_0_35lev_ann_avg.nc'
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_0/woa18/WOA18_*_tx2_0v1_35lev_ann_avg_260528.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: False
@@ -243,6 +243,18 @@ sources:
       xarray_kwargs:
         engine: netcdf4
 
+  adt-aviso-tx2_0v1:
+    description: AVISO Absolute Dynamic Topography (ADT) averaged from 1993 to 2000 and remaped to tx2_0v1
+    driver: netcdf
+    metadata:
+      grid: tx2_0v1
+      version: 2020
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_0/aviso/aviso_adt_to_tx2_0v1_260608.nc'
+      chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
+
   sla-rms-aviso-tx0.66v1:
     description: RMS AVISO sea level anomaly climatology
     driver: netcdf
@@ -371,6 +383,19 @@ sources:
       version: 2023
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/mld/deBoyer2023/deBoyer23_MLD_remapped_to_tx2_3.nc'
+      chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
+
+  mld-deboyer-2023-tx2_0v1:
+    description: De Boyer Montegut 2023 MLD climatology remaped to tx2_0v1
+    driver: netcdf
+    metadata:
+      grid: tx2_0v1
+      frequency: monthly
+      version: 2023
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_0/mld/deBoyer23_MLD_remapped_to_tx2_0v1_260608.nc'
       chunks: {}
       xarray_kwargs:
         engine: netcdf4
