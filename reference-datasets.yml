@@ -64,6 +64,21 @@ sources:
         decode_times: False
         engine: netcdf4
 
+  woa-2018-tx2_3v3_z65-annual-all:
+    description: World Ocean Atlas 2018 all data average
+    driver: netcdf
+    metadata:
+      prefix: woa
+      version: 2018
+      grid: tx2_3v2
+      frequency: annual
+    args:
+      urlpath: '/glade/work/chengz/cesm.configs/tx2_3/woa18/WOA18_*_tx2_3v3_65lev_ann_avg_261109.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: False
+        engine: netcdf4
+
   woa-2018-tx2_0-annual-all:
     description: World Ocean Atlas 2018 all data average
     driver: netcdf
@@ -89,6 +104,21 @@ sources:
       frequency: monthly
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/woa18/WOA18_*_tx2_3_35lev_monthly_avg.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: False
+        engine: netcdf4
+
+  woa-2018-tx2_3v3_z65-monthly-all:
+    description: World Ocean Atlas 2018 monthly average climatology
+    driver: netcdf
+    metadata:
+      prefix: woa
+      version: 2018
+      grid: tx2_3v2
+      frequency: monthly
+    args:
+      urlpath: '/glade/work/chengz/cesm.configs/tx2_3/woa18/WOA18_*_tx2_3v3_65lev_monthly_avg_261109.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: False
@@ -145,7 +175,7 @@ sources:
     metadata:
       prefix: moc
     args:
-      urlpath: '/glade/campaign/cesm/community/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.26p5.nc'
+      urlpath: '/glade/campaign/cesm/community.OLD/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.26p5.nc'
       xarray_kwargs:
         engine: netcdf4
 
@@ -155,7 +185,7 @@ sources:
     metadata:
       prefix: moc
     args:
-      urlpath: '/glade/campaign/cesm/community/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.45.nc'
+      urlpath: '/glade/campaign/cesm/community.OLD/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.45.nc'
       xarray_kwargs:
         engine: netcdf4
 
@@ -187,7 +217,7 @@ sources:
       frequency: annual
       version: 2018
     args:
-      urlpath: '/glade/campaign/cesm/community/omwg/obs_data/phc/PHC2_*_tx0.66v1_34lev_ann_avg.nc'
+      urlpath: '/glade/campaign/cesm/community.OLD/omwg/obs_data/phc/PHC2_*_tx0.66v1_34lev_ann_avg.nc'
       chunks: {}
       xarray_kwargs:
         decode_coords: False
@@ -198,7 +228,7 @@ sources:
     description: Johnson et al (2001) climatology
     driver: netcdf
     args:
-      urlpath: '/glade/campaign/cesm/community/omwg/obs_data/johnson_pmel/meanfit_m.nc'
+      urlpath: '/glade/campaign/cesm/community.OLD/omwg/obs_data/johnson_pmel/meanfit_m.nc'
       chunks: {}
       xarray_kwargs:
         decode_coords: False
@@ -209,7 +239,7 @@ sources:
     description: Ni et al (2023) EKE climatology
     driver: netcdf
     args:
-      urlpath: '/glade/campaign/cesm/community/omwg/obs_data/eddy_kinetic_energy/eke_global.nc'
+      urlpath: '/glade/campaign/cesm/community.OLD/omwg/obs_data/eddy_kinetic_energy/eke_global.nc'
       chunks: {}
       xarray_kwargs:
         decode_coords: False
